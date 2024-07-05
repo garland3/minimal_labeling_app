@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Box Drawing</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/static/script.js"></script>
+    <!-- Milligram CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css">
+    <style>
+        body {
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        #image-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        #canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .button-group {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Image Box Drawing</h1>
+        <div id="image-container">
+            <img id="image" src="{{ img_file_path }}" alt="Sample Image">
+            <canvas id="canvas"></canvas>
+        </div>
+        <div class="button-group">
+            <button id="backward" class="button button-outline">Previous</button>
+            <button id="submit" class="button">Submit</button>
+            <button id="forward" class="button button-outline">Next</button>
+        </div>
+    </div>
+</body>
+</html>
